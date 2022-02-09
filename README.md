@@ -16,3 +16,8 @@
 The private key is mixed with the base64 code, which means that the larger the key, the less likely it is to be in the base64 code.<br><br>
 If the key is unfortunately in the base64 code, then some data cannot be recovered, this is why it is better to test the decryption with its secret key before deleting the non-encrypted data, and only keep the encrypted data.<br><br>
 Clearly test your keys by decrypting before deleting the data to be encrypted.
+
+## Supported file type :
+
+Png, gif, jpg, jpeg, tiff, tif, bmp, raw.<br><br>
+If you want more file types, please indicate them.
