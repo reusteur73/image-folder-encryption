@@ -20,6 +20,12 @@ f.close() # Close
 png = base64.b64encode("png".encode()).decode() # Define encoded png
 gif = base64.b64encode("gif".encode()).decode() # Define encoded gif
 jpg = base64.b64encode("jpg".encode()).decode() # Define encoded jpg
+jpeg = base64.b64encode("jpeg".encode()).decode() # Define encoded jpeg
+tiff = base64.b64encode("tiff".encode()).decode() # Define encoded tiff
+tif = base64.b64encode("tif".encode()).decode() # Define encoded tif
+bmp = base64.b64encode("bmp".encode()).decode() # Define encoded bmp
+raw = base64.b64encode("raw".encode()).decode() # Define encoded raw
+
 
 file1 = open("temp_decrypted_data.txt", 'r') # Open decrypted data txt
 Lines = file1.readlines() # Get lines
@@ -43,6 +49,26 @@ for line in Lines: # Create the loop for each line
     if jpg in line:
         line.replace(jpg, '')
         extension = ".jpg"
+    # If jpeg is detect, remove it and set extension as jpeg
+    if jpeg in line:
+        line.replace(jpeg, '')
+        extension = ".jpeg"
+    # If tiff is detect, remove it and set extension as tiff
+    if tiff in line:
+        line.replace(tiff, '')
+        extension = ".tiff"
+    # If tif is detect, remove it and set extension as tif
+    if tif in line:
+        line.replace(tif, '')
+        extension = ".tif"
+    # If bmp is detect, remove it and set extension as bmp
+    if bmp in line:
+        line.replace(bmp, '')
+        extension = ".bmp"
+    # If raw is detect, remove it and set extension as raw
+    if raw in line:
+        line.replace(raw, '')
+        extension = ".raw"
 
     name = str(count) + extension # Define name
     
